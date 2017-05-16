@@ -1,4 +1,4 @@
-namespace Topshelf.Logging
+﻿namespace Topshelf.Logging
 {
     using System;
     using System.Text;

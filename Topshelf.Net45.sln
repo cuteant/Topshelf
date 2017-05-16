@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topshelf.Net45", "src\Topshelf\Topshelf.Net45.csproj", "{A52AD64D-6455-4A22-8CCF-581851086578}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A2D845AB-842C-483D-BB12-C7073EC9BED9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topshelf.NLog.Net45", "src\Topshelf.NLog\Topshelf.NLog.Net45.csproj", "{55FC6F5C-778F-4E77-8C55-C62216858CE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topshelf.Serilog.Net45", "src\Topshelf.Serilog\Topshelf.Serilog.Net45.csproj", "{20F2B28C-3AD6-4B1D-9371-15DF77443DA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{CEDA65C8-41CD-4343-B04A-67764FC815DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E9B7DCD5-F801-4FEC-86B0-A33ECABB4C76}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuspecs", "nuspecs", "{3CFC0E77-2245-4211-9A66-865643500566}"
+	ProjectSection(SolutionItems) = preProject
+		nuspecs\pack.cmd = nuspecs\pack.cmd
+		nuspecs\publishing.cmd = nuspecs\publishing.cmd
+		nuspecs\Topshelf.NLog.nuspec = nuspecs\Topshelf.NLog.nuspec
+		nuspecs\Topshelf.nuspec = nuspecs\Topshelf.nuspec
+		nuspecs\Topshelf.Serilog.nuspec = nuspecs\Topshelf.Serilog.nuspec
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A52AD64D-6455-4A22-8CCF-581851086578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A52AD64D-6455-4A22-8CCF-581851086578}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A52AD64D-6455-4A22-8CCF-581851086578}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A52AD64D-6455-4A22-8CCF-581851086578}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55FC6F5C-778F-4E77-8C55-C62216858CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55FC6F5C-778F-4E77-8C55-C62216858CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55FC6F5C-778F-4E77-8C55-C62216858CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55FC6F5C-778F-4E77-8C55-C62216858CE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20F2B28C-3AD6-4B1D-9371-15DF77443DA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20F2B28C-3AD6-4B1D-9371-15DF77443DA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20F2B28C-3AD6-4B1D-9371-15DF77443DA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20F2B28C-3AD6-4B1D-9371-15DF77443DA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A52AD64D-6455-4A22-8CCF-581851086578} = {A2D845AB-842C-483D-BB12-C7073EC9BED9}
+		{55FC6F5C-778F-4E77-8C55-C62216858CE7} = {A2D845AB-842C-483D-BB12-C7073EC9BED9}
+		{20F2B28C-3AD6-4B1D-9371-15DF77443DA8} = {A2D845AB-842C-483D-BB12-C7073EC9BED9}
+	EndGlobalSection
+EndGlobal

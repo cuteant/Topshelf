@@ -1,0 +1,12 @@
+﻿{
+  "frameworks": {
+    "net451": {}
+  },
+  "runtimes": {
+    "win-anycpu": {},
+    "win": {}
+  },
+  "dependencies": {
+    "Serilog": "2.4.0"
+  }
+}

@@ -1,4 +1,4 @@
-namespace Topshelf.Caching
+﻿namespace Topshelf.Caching
 {
     using System;
     using System.Collections.Generic;
