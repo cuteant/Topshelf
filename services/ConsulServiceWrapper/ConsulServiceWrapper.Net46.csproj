@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{20F2B28C-3AD6-4B1D-9371-15DF77443DA8}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Topshelf.Serilog</RootNamespace>
-    <AssemblyName>Topshelf.Serilog</AssemblyName>
+    <ProjectGuid>{3D6A46E9-704A-4278-8AF5-829C61F59A94}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsulServiceWrapper</RootNamespace>
+    <AssemblyName>ConsulServiceWrapper</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -16,6 +15,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,9 +24,9 @@
     <DefineConstants>TRACE;DEBUG;DESKTOPCLR;NET461;NET_3_5_GREATER;NET_4_0_GREATER;NET_4_5_GREATER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <IntermediateOutputPath>obj\Release\Net46</IntermediateOutputPath>
@@ -34,8 +34,6 @@
     <DefineConstants>TRACE;DESKTOPCLR;NET461;NET_3_5_GREATER;NET_4_0_GREATER;NET_4_5_GREATER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>..\..\Deploy\Net46\Topshelf.Serilog.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -45,31 +43,47 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\SolutionVersion.cs">
-      <Link>Properties\SolutionVersion.cs</Link>
-    </Compile>
-    <Compile Include="Logging\SerilogLogWriter.cs" />
-    <Compile Include="Logging\SerilogLogWriterFactory.cs" />
-    <Compile Include="SerilogConfigurationExtensions.cs" />
+    <Compile Include="ConsulServiceConfiguration.cs" />
+    <Compile Include="ProcessMapper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceInstance.cs" />
+    <Compile Include="ServiceInstanceCollection.cs" />
+    <Compile Include="ServiceWrapper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Topshelf\Topshelf.Net46.csproj">
-      <Project>{A52AD64D-6455-4A22-8CCF-581851086578}</Project>
+    <None Include="App.config" />
+    <None Include="consul.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Install.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="svcreg.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="svcstart.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="svcstop.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="svcunreg.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="win.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Topshelf\Topshelf.Net46.csproj">
+      <Project>{a52ad64d-6455-4a22-8ccf-581851086578}</Project>
       <Name>Topshelf.Net46</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Topshelf.Serilog.Net46.project.json" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
