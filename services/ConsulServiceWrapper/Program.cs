@@ -23,9 +23,9 @@ namespace ConsulServiceWrapper
          s.WhenStopped(tc => tc.Stop());
        });
 
-        x.SetDescription("ConsulServiceWrapper");
-        x.SetDisplayName("ConsulServiceWrapper");
-        x.SetServiceName("ConsulServiceWrapper");
+        x.SetDescription(configuration.ServiceDescription);
+        x.SetDisplayName(configuration.ServiceDisplayName);
+        x.SetServiceName(configuration.ServiceName);
       });
     }
 
