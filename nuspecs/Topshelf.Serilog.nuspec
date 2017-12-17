@@ -16,11 +16,11 @@
     <dependencies>
       <group targetFramework=".NETFramework4.5.1">
         <dependency id="Topshelf.Unofficial" version="$version$" />
-        <dependency id="Serilog" version="2.4.0" />
+        <dependency id="Serilog" version="2.6.0" />
       </group>
-      <group targetFramework=".NETFramework4.6.1">
+      <group targetFramework=".NETFramework4.7.1">
         <dependency id="Topshelf.Unofficial" version="$version$" />
-        <dependency id="Serilog" version="2.4.0" />
+        <dependency id="Serilog" version="2.6.0" />
       </group>
     </dependencies>
     <frameworkAssemblies>
@@ -29,7 +29,7 @@
   <files>
     <file src="..\Deploy\Net45\Topshelf.Serilog.dll" target="lib\net451" />
     <file src="..\Deploy\Net45\Topshelf.Serilog.xml" target="lib\net451" />
-    <file src="..\Deploy\Net46\Topshelf.Serilog.dll" target="lib\net461" />
-    <file src="..\Deploy\Net46\Topshelf.Serilog.xml" target="lib\net461" />
+    <file src="..\Deploy\Net47\Topshelf.Serilog.dll" target="lib\net471" />
+    <file src="..\Deploy\Net47\Topshelf.Serilog.xml" target="lib\net471" />
   </files>
 </package>

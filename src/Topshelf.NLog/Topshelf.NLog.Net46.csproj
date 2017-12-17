@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Topshelf.NLog</RootNamespace>
     <AssemblyName>Topshelf.NLog</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -21,9 +21,9 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <IntermediateOutputPath>obj\Debug\Net46</IntermediateOutputPath>
-    <OutputPath>..\..\Deploy\Net46\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;DESKTOPCLR;NET461;NET_3_5_GREATER;NET_4_0_GREATER;NET_4_5_GREATER</DefineConstants>
+    <IntermediateOutputPath>obj\Debug\Net47</IntermediateOutputPath>
+    <OutputPath>..\..\Deploy\Net47\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DESKTOPCLR;NET471;NET_3_5_GREATER;NET_4_0_GREATER;NET_4_5_GREATER;NET_4_6_GREATER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
@@ -31,13 +31,13 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <IntermediateOutputPath>obj\Release\Net46</IntermediateOutputPath>
-    <OutputPath>..\..\Deploy\Net46\</OutputPath>
-    <DefineConstants>TRACE;DESKTOPCLR;NET461;NET_3_5_GREATER;NET_4_0_GREATER;NET_4_5_GREATER</DefineConstants>
+    <IntermediateOutputPath>obj\Release\Net47</IntermediateOutputPath>
+    <OutputPath>..\..\Deploy\Net47\</OutputPath>
+    <DefineConstants>TRACE;DESKTOPCLR;NET471;NET_3_5_GREATER;NET_4_0_GREATER;NET_4_5_GREATER;NET_4_6_GREATER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>..\..\Deploy\Net46\Topshelf.NLog.xml</DocumentationFile>
+    <DocumentationFile>..\..\Deploy\Net47\Topshelf.NLog.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>

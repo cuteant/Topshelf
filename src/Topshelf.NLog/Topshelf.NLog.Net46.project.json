@@ -1,12 +1,12 @@
 ﻿{
   "frameworks": {
-    "net461": {}
+    "net471": {}
   },
   "runtimes": {
     "win-anycpu": {},
     "win": {}
   },
   "dependencies": {
-    "NLog": "4.4.9"
+    "NLog": "4.5.0-rc03"
   }
 }

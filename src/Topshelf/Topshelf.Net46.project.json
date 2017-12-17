@@ -1,6 +1,6 @@
 ﻿{
   "frameworks": {
-    "net461": {}
+    "net471": {}
   },
   "runtimes": {
     "win-anycpu": {},

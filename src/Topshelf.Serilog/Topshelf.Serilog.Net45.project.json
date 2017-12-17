@@ -7,6 +7,6 @@
     "win": {}
   },
   "dependencies": {
-    "Serilog": "2.4.0"
+    "Serilog": "2.6.0"
   }
 }
