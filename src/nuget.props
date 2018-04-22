@@ -1,0 +1,14 @@
+<Project>
+  <!-- Set common properties regarding assembly information and nuget packages -->
+  <PropertyGroup>
+    <Authors>Chris Patterson,  Dru Sellers,  Travis Smith,  Brian Wilson,  Mogens Heller Grabe</Authors>
+    <Product>Topshelf</Product>
+    <PackageLicenseUrl>https://github.com/Topshelf/Topshelf/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Topshelf/Topshelf</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Topshelf/Topshelf.git</RepositoryUrl>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <IncludeSymbols>false</IncludeSymbols>
+    <IncludeSource>false</IncludeSource>
+  </PropertyGroup>
+</Project>
